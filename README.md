@@ -17,5 +17,5 @@ rails s -p 3000 -b '0.0.0.0'
 
 # コンテナ停止、起動
 docker stop perfect-rails
-docker strat perfect-rails
+docker start perfect-rails
 ```
