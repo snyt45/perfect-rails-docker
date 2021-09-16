@@ -19,3 +19,19 @@ rails s -p 3000 -b '0.0.0.0'
 docker stop perfect-rails
 docker start perfect-rails
 ```
+
+## 複数のコンテナを意識した場合のコンテナ作成方法
+
+```
+# イメージ作成
+docker build . -t perfect-rails --build-arg ruby_version=2.6.3 --build-arg rails_version=6.0.1
+
+# ネットワーク作成
+docker network create perfect-rails
+
+# コンテナ起動
+# fish
+docker run --network perfect-rails -d -t -v (pwd):/app -p 3000:3000 --name="perfect-rails" perfect-rails
+
+# 他のコンテナ起動時にも--network perfect-railを指定する
+```
