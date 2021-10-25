@@ -1,4 +1,7 @@
 # perfect-rails-docker
+
+[パーフェクトRuby on Railsで何度もrails newできる環境をDockerで作る • Small Changes](https://snyt45.com/posts/20210821/perfect-rails-docker/)
+
 ## 使い方
 
 ```
